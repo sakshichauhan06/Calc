@@ -12,8 +12,12 @@ function btnClick(ele) {
     
     if(ele.id == 'ac') {
         scr.innerHTML = "";
+        x = 0;
+        y = 0;
     } else if(ele.id== 'ce') {
         scr.innerHTML = "";
+        x = 0;
+        y = 0;
     } else if(ele.classList.contains('op') && flag != 1) {
         x = parseFloat(scr.innerHTML);
         operator = ele.innerHTML;
@@ -30,21 +34,25 @@ function btnClick(ele) {
         // console.log(y);
         // console.log(ele.id);
         // op = parseFloat(operator);
-        ans = x + y;
-        console.log(ans);
-        screen.innerHTML = "";
-        flag = 0;
 
+        if(operator == '+') {
+            ans = x + y;
+        } else if(operator == '-') {
+            ans = x - y;
+        } else if(operator == 'x') {
+            ans = x*y;
+        } else if(operator == '/') {
+            ans = x/y;
+        } else if(operator == '%') {
+            ans = (x*(1/100))*y;
+        }
+        x = 0;
+        y = 0;
+        console.log(ans);
+        scr.innerHTML = ans;
+        flag = 0;
     } else {
         scr.innerHTML += ele.innerHTML;
     }
-   
-    // else {
-    //     scr.innerHTML += ele.innerHTML;
-    //     brn.innerHTML += scr.innerHTML;
-    //     y = parseFloat(scr.innerHTML);
-    //     console.log(y);
-    // }
-    
 }
 
