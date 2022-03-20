@@ -33,6 +33,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 22px;
+    box-shadow: 9px 10px #c0bebe;
 }
 
 .screen {
