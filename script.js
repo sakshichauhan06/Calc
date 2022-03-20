@@ -14,10 +14,14 @@ function btnClick(ele) {
         scr.innerHTML = "";
         x = 0;
         y = 0;
+        ans = 0;
+        operator = "";
     } else if(ele.id== 'ce') {
         scr.innerHTML = "";
         x = 0;
         y = 0;
+        ans = 0;
+        operator = "";
     } else if(ele.classList.contains('op') && flag != 1) {
         x = parseFloat(scr.innerHTML);
         operator = ele.innerHTML;
